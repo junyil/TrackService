@@ -26,7 +26,7 @@ The project I would like to develop is an App named TrackService. It provides a 
 
 5. The production information is battery, tire, or none of these.
 
-![img](img/clip_image003.png)
+![img](image/clip_image003.png)
 
 ## Attributes
 
