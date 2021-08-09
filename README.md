@@ -12,7 +12,7 @@ The project I would like to develop is an App named TrackService. It provides a 
 
 4. Each customer may have zero to many cars. Each car has exactly one owner. 
 
-   ![](/clip_image002.png)
+   ![](image/clip_image002.png)
 
 ## Conceptual entity-relationship diagram
 
@@ -26,7 +26,7 @@ The project I would like to develop is an App named TrackService. It provides a 
 
 5. The production information is battery, tire, or none of these.
 
-![img](/clip_image003.png)
+![img](image/clip_image003.png)
 
 ## Attributes
 
@@ -68,15 +68,15 @@ According to these two new entities, there are two new database rules that used 
 
 The producer information and product types are now include in the conceptual ERD, and conceptual ERD is in sync with the structural database rules and the DBMS physical ERD.
 
-![Screen Shot 2020-11-12 at 7.39.44 PM](/clip_image004.png)
+![Screen Shot 2020-11-12 at 7.39.44 PM](image/clip_image004.png)
 
 ## Create Script
 
 In this part, I first drop all tables which might have the same name and it is a script that could be execute multiple times. The screens shot contain the scripts which include attributes and constraints. Note that, I run this script under SQL developer. 
 
-![img](/clip_image006.png)
+![img](image/clip_image006.png)
 
-![Screen Shot 2020-11-12 at 7.54.19 PM](/clip_image007.png)
+![Screen Shot 2020-11-12 at 7.54.19 PM](image/clip_image007.png)
 
 The columns and constraints are executed according to physical ERD and conceptual ERD provide before.
 
@@ -84,7 +84,7 @@ The columns and constraints are executed according to physical ERD and conceptua
 
 Here is a screen shot about the script of creating index for database. I create some non-unique and unique index in this application database system.
 
-![Screen Shot 2020-11-12 at 7.11.44 PM](/clip_image008.png)
+![Screen Shot 2020-11-12 at 7.11.44 PM](image/clip_image008.png)
 
 To have high efficiency in the daily use, I create ProducerIdIdx, TypeIDIdx, AutoshopIdIdx, VinNumberIdx, and AccountIdx to retrieve the information quickly. 
 
@@ -108,7 +108,7 @@ In this Use Case, I would like to create procedure help us to finish. This proce
 
 This is my screenshot of my stored procedure definition. 
 
-![img](/clip_image009.png)
+![img](image/clip_image009.png)
 
 Andy’s account id is 874419890. The vin number of this vehicle is 1HGBH41JXMN102345. The make of this vehicle is BMW and model is X5 and year of vehicle is 2015. Since some of information is primary key in other tables, it is necessary to check the unique of this information. 
 
@@ -116,11 +116,11 @@ Andy’s account id is 874419890. The vin number of this vehicle is 1HGBH41JXMN1
 
 Here is a screenshot of my stored procedure executions. 
 
-![img](/clip_image0010.png)
+![img](image/clip_image0010.png)
 
-![img](/clip_image0011.png)
+![img](image/clip_image0011.png)
 
-![img](/clip_image0012.png)
+![img](image/clip_image0012.png)
 
 After executing this procedure with this information, we can find this record in the database clearly. Here is the screenshot about the database of car information in his account. 
 
@@ -132,7 +132,7 @@ After reviewing my DBMS and conceptual ERD, it is useful to check the service hi
 
 Here is the update conceptual ERD below. 
 
-![img](/clip_image0013.png)
+![img](image/clip_image0013.png)
 
 I added the service history change entity into conceptual ERD. Here are attributes of this entity in the DBMS physical ERD. 
 
@@ -148,15 +148,15 @@ I added the service history change entity into conceptual ERD. Here are attribut
 
 Here is a screenshot of table creating. All attributes are the same with the attributes in DBMS physical ERD. 
 
-![img](/clip_image0014.png)
+![img](image/clip_image0014.png)
 
 Here is a screenshot of my trigger creation which will maintain the HistoryChange table.
 
-![img](/clip_image0015.png)
+![img](image/clip_image0015.png)
 
 I explain it line by line. 
 
-![img](/clip_image0016.png)
+![img](image/clip_image0016.png)
 
 | **create or replace   TRIGGER MileageChange  BEFORE UPDATE OF Mileage ON  CARINFORMATION** | **This  starts the definition of trigger and names it “MileageChange”. The trigger is  linked to the Carinformation table and is executed automatically after any updated  about mileage to that table.** |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -166,15 +166,15 @@ I explain it line by line.
 
  
 
-![img](/clip_image0017.png)
+![img](image/clip_image0017.png)
 
-![img](/clip_image018.png) 
+![img](image/clip_image018.png) 
 
  
 
 After update four times mileage record, it is necessary to check the mileagechange table. 
 
-![img](/clip_image019.png)
+![img](image/clip_image019.png)
 
 Now, it is clear to see the vehicle which vin number is 1HGBH41JXMN109186 has four records about mileage change. Since the mileage change record is reported by service, it is clear to count the number of services the owner have in the database.
 
@@ -190,24 +190,24 @@ Firstly, I need to make a list of car that belong to paid account so that I can 
 
 Here is a screenshot of the query I use. 
 
-![img](/clip_image020.png) ![img](/clip_image021.png)
+![img](image/clip_image020.png) ![img](image/clip_image021.png)
 
 To show this function work correctly, this is all information that stored in the database.
 
-![img](/clip_image022.png)
+![img](image/clip_image022.png)
 
-![img](/clip_image023.png)
+![img](image/clip_image023.png)
 
  
 
 Then, it is useful to find the customer who has service records at the auto shop owner whose business field is oil change. 
 
-![img](/clip_image024.png)
+![img](image/clip_image024.png)
 
-![img](/clip_image025.png)
+![img](image/clip_image025.png)
 
-![img](/clip_image026.png)
+![img](image/clip_image026.png)
 
-![img](/clip_image027.png)
+![img](image/clip_image027.png)
 
 Here is the information about the different tables. In fact, the main table is service history. It connect with different tables and share different foreign keys.
