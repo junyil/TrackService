@@ -1,8 +1,2 @@
 # TrackService
-1. It provides a database for the customers to track the service history of their vehicle.
-
-2. The auto shop owner could register into database and provide service history for the vehicle. 
-
-3. The customer could track the information about the part that used in the service. 
-
-4. The information about manufactured date and manufacturer of the part could be retrieve in the database. 
+The project I would like to develop is an App named TrackService. It provides a database for the vehicle owner and the owner of the auto service to search car service records, updates new service records include air filter change, extensive brake inspection, etc. At the same time, brand information on the part and the date of the next estimated service would be automatically updated. In fact, when people take their car to a dealership’s service department for repair, there are two different choices for them. Firstly, the dealerships usually recommend the Original Equipment Manufacturer (OEM) car part. However, if they bring their car to an independent shop for service and repair, these shops most likely provide the aftermarket car part. For aftermarket car parts, there are many different brands in the market and quality varies greatly, so it is important to deal with a good mechanic and request a high-quality aftermarket car part to ensure the use of the car every day. 
